@@ -1,4 +1,166 @@
 #include <stdio.h>
+#include <math.h>
+
+// session eight
+
+void eight_p6()
+{
+  int numbers[2], max;
+
+  for (int i = 0; i <= 1; i++)
+  {
+    printf("Please Enter #%d number : ", i + 1);
+    scanf("%d", &numbers[i]);
+  }
+
+  numbers[0] > numbers[1] ? printf("%d \n", numbers[0]) : printf("%d \n", numbers[1]);
+}
+
+void eight_p7()
+{
+  char utils[3] = {'a', 'b', 'c'};
+  float inputs[3];
+  float delta, x1, x2;
+
+  for (int i = 0; i <= 2; i++)
+  {
+    printf("Please enter %c : ", utils[i]);
+    scanf("%f", &inputs[i]);
+  }
+
+  delta = inputs[1] * inputs[1] - 4 * inputs[0] * inputs[2];
+
+  if (delta >= 0)
+  {
+    x1 = (-inputs[1] + sqrt(delta)) / (2 * inputs[0]);
+    x1 = (-inputs[1] - sqrt(delta)) / (2 * inputs[0]);
+
+    printf("First root equals : %6.2f \n Second root is equals : %6.2f \n", x1, x2);
+  }
+  else
+  {
+    printf("Given function doesnot provided to have real Root(s)! \n");
+  }
+}
+
+void eight_p9()
+{
+  float grade;
+
+  printf("Please enter the grade : ");
+  scanf("%f", &grade);
+
+  if (grade <= 20 && grade >= 17)
+    printf("A \n");
+  else if (grade < 17 && grade >= 15)
+    printf("B \n");
+  else if (grade < 15 && grade >= 12)
+    printf("C \n");
+  else
+    printf("D \n");
+}
+
+void eight_p10()
+{
+  int day;
+
+  printf("Please enter the day : ");
+  scanf("%d", &day);
+
+  if (day == 1)
+    printf("Saturday \n");
+  else if (day == 2)
+    printf("Sunday \n");
+  else if (day == 3)
+    printf("Monday");
+  else if (day == 4)
+    printf("Tuesday");
+  else if (day == 5)
+    printf("Wednesday");
+  else if (day == 6)
+    printf("Thursday");
+  else if (day == 7)
+    printf("Friday");
+}
+
+void eight_p12()
+{
+  int number, odd = 0, event = 0;
+
+  while (1)
+  {
+    printf("Please enter a number : ");
+    scanf("%d", &number);
+
+    if (number == 0)
+      break;
+    else if (number % 2 == 0)
+      event++;
+    else
+      odd++;
+  }
+
+  printf("You entered %d event number and %d odd number \n", event, odd);
+}
+
+void eight_p14()
+{
+  for (int i = 10; i <= 50; i++)
+  {
+    if (i % 7 == 0)
+      continue;
+    printf("%6.2d", i);
+  }
+}
+
+void eight_p16()
+{
+  int a = 0;
+label:
+  if (a < 66)
+  {
+    printf("%d", a);
+    a++;
+    goto label;
+  }
+  printf("The final quantity of is equals: %d \n", a);
+}
+
+void eight_p18()
+{
+  int input;
+
+  printf("please enter a number in range one and seven [1-7] : ");
+  scanf("%d", &input);
+
+  switch (input)
+  {
+  case 1:
+    printf("Saturday \n");
+    break;
+  case 2:
+    printf("Sunday \n");
+    break;
+  case 3:
+    printf("Monday \n");
+    break;
+  case 4:
+    printf("Tuesday \n");
+    break;
+  case 5:
+    printf("Wednesday \n");
+    break;
+  case 6:
+    printf("Thursday \n");
+    break;
+  case 7:
+    printf("Friday \n");
+    break;
+
+  default:
+    printf("Sorry maybe : The given number is n't in ordered range! \n");
+  }
+}
 
 // session nine
 
@@ -199,6 +361,17 @@ void ten_p15()
 
 int main()
 {
+
+  // session eight
+
+  // eight_p6();
+  // eight_p7();
+  // eight_p9();
+  // eight_p10();
+  // eight_p12();
+  // eight_p14();
+  // eight_p16();
+  // eight_p18();
 
   // session nine
 
